@@ -1,21 +1,14 @@
 [package]
-name = "bintable"
+name = "inverted-index-bintable"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-csv = "1.1.6"                    # Fast CSV parsing with support for serde.
-threadpool = "1.8.1"                      # A thread pool for running a number of jobs on a fixed set of worker threads.
-get-size = { version = "^0.1.1", features = ["derive"] }
-
-postgres = "0.19.4"                         # A native, synchronous PostgreSQL client
-anyhow = "1.0.65"                                   # Flexible concrete Error type built on std::error::Error
-fallible-iterator = "0.2.0"              # Fallible iterator traits
-structopt = "0.3.26"               # Parse command line argument by defining a struct.
-rand = "*"
 int-compression-4-wise = "0.1.1"    # Fast algorithm to compress lists if integers in blocks of 4. Appends 0 to blocks, if length…
 lz4_flex = "0.9.5"         # Fastest LZ4 implementation in Rust, no unsafe by default.
 fast-smaz = "0.1.0"    # Pure Rust SMAZ compression implementation
 varint-compression = "0.1.0"    # variable length integer compression
+postgres = "0.19.4"                         # A native, synchronous PostgreSQL client
+anyhow = "1.0.65"                                   # Flexible concrete Error type built on std::error::Error

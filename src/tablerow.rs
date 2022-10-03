@@ -3,8 +3,6 @@ use fast_smaz::Smaz;
 use postgres::Row;
 use varint_compression::*;
 
-use super::{Entry, TableLocation};
-
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct TableRow {
     pub tokenized: String,
@@ -88,16 +86,5 @@ impl TableRow {
             colid,
             rowid,
         }
-    }
-
-    pub fn into_entry(self) -> Entry {
-        let TableRow {
-            tokenized,
-            tableid,
-            colid,
-            rowid,
-        } = self;
-
-        (tokenized, TableLocation::new(tableid, colid, rowid))
     }
 }
